@@ -1,0 +1,16 @@
+<div class="flex flex-column justify-content-center gap-3">
+  <div class="flex flex-column gap-1">
+    <label>Expression</label>
+    <div class="panel-expression">
+      <span *ngFor="let item of expressionArray">
+        <span [ngClass]="{brackets: item.bracket, error: item.error}"> {{ item.value + ' ' }}</span>
+      </span>
+    </div>
+  </div>
+  <div class="flex flex-column gap-1">
+    <label>Result</label>
+    <div class="panel-result">
+      <div>{{ hasInputError ? hasInputError.error?.message : resultString }}</div>
+    </div>
+  </div>
+</div>

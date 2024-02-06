@@ -1,0 +1,44 @@
+<p-panel header="Simple Calculator" styleClass="panel-calc">
+  <div class="flex flex-column gap-4">
+    <div class="w-full">
+      <app-calculator-screen></app-calculator-screen>
+    </div>
+    <div class="flex flex-column gap-2">
+      <div class="flex flex-row gap-2">
+        <app-calculator-button name="(" type="operator" (pressBtn)="addOperation($event)"/>
+        <app-calculator-button name=")" type="operator" (pressBtn)="addOperation($event)"/>
+        <app-calculator-button name="^" type="operator" (pressBtn)="addOperation($event)"/>
+        <app-calculator-button name="e" type="operator" (pressBtn)="addOperation($event)"/>
+      </div>
+      <div class="flex flex-row gap-2">
+        <app-calculator-button name="7" type="digit" (pressBtn)="addDigit($event)"/>
+        <app-calculator-button name="8" type="digit" (pressBtn)="addDigit($event)"/>
+        <app-calculator-button name="9" type="digit" (pressBtn)="addDigit($event)"/>
+        <app-calculator-button name="/" type="operator" (pressBtn)="addOperation($event)"/>
+      </div>
+      <div class="flex flex-row gap-2">
+        <app-calculator-button name="4" type="digit" (pressBtn)="addDigit($event)"/>
+        <app-calculator-button name="5" type="digit" (pressBtn)="addDigit($event)"/>
+        <app-calculator-button name="6" type="digit" (pressBtn)="addDigit($event)"/>
+        <app-calculator-button name="*" type="operator" (pressBtn)="addOperation($event)"/>
+      </div>
+      <div class="flex flex-row gap-2">
+        <app-calculator-button name="1" type="digit" (pressBtn)="addDigit($event)"/>
+        <app-calculator-button name="2" type="digit" (pressBtn)="addDigit($event)"/>
+        <app-calculator-button name="3" type="digit" (pressBtn)="addDigit($event)"/>
+        <app-calculator-button name="-" type="operator" (pressBtn)="addOperation($event)"/>
+      </div>
+      <div class="flex flex-row gap-2">
+        <app-calculator-button name="%" type="operator" (pressBtn)="addOperation($event)"/>
+        <app-calculator-button name="0" type="digit" (pressBtn)="addDigit($event)"/>
+        <app-calculator-button name="." type="digit" (pressBtn)="addDigit($event)"/>
+        <app-calculator-button name="+" type="operator" (pressBtn)="addOperation($event)"/>
+      </div>
+      <div class="flex flex-row gap-2">
+        <app-calculator-button name="=" type="operator" (pressBtn)="doCalculation()" class="dubble-button"/>
+        <app-calculator-button name="AC" type="operator" (pressBtn)="doClear()"/>
+        <app-calculator-button name="DEL" type="operator" (pressBtn)="doDelete()"/>
+      </div>
+    </div>
+  </div>
+</p-panel>

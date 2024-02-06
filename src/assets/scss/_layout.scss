@@ -1,0 +1,42 @@
+.layout {
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  background-position: top center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+
+  .layout-content {
+    position: relative;
+    flex-grow: 1;
+    margin: 40px auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .desktop & {
+    .layout-content {
+      padding: 0 $content-px-desktop;
+      max-width: $content-max-width-desktop;
+    }
+  }
+
+  .tablet & {
+    .layout-content {
+      padding: 0 $content-px-tablet;
+      max-width: $content-max-width-tablet;
+    }
+  }
+
+  .mobile & {
+    .layout-content {
+      padding: 0 $content-px-mobile;
+      max-width: $content-max-width-mobile;
+    }
+  }
+}
+
+
+
